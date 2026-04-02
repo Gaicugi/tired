@@ -11,7 +11,14 @@ from lib.params import get_stunlogin_args
 def main():
     ip, host, rport, proto, verbose, user, pwd = get_stunlogin_args()
 
-  
+    s = StunLogin()
+    s.ip = ip
+    s.host = host
+    s.rport = rport
+    s.proto = proto
+    s.verbose = verbose
+    s.user = user
+    s.pwd = pwd
 
     s.start()
 
